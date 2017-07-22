@@ -31,12 +31,14 @@ for file in $files; do
 done
 
 # Install tpm
+mkdir -p $dir/tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Make vim backup swap and undo folders
-mkdir ~/.vim/_swap
-mkdir ~/.vim/_backup
-mkdir ~/.vim/_undo
+mkdir -p $dir/vim
+mkdir -p $dir/vim/_swap
+mkdir -p $dir/vim/_backup
+mkdir -p $dir/vim/_undo
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:

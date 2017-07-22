@@ -9,7 +9,6 @@
 set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
 filetype plugin on
 set backspace=2 " make backspace work like most other apps
-source ~/dotfiles/vimrc_modules/neocomplete.rc.vim
 
 " File searching
 set path+=**
@@ -30,13 +29,10 @@ set backupdir=~/.vim/_backup/
 set undofile
 set undodir=~/.vim/_undo/
 
-set viminfo =
-
 " }}}
 " Plugins {{{
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
 filetype plugin indent on
 
 " }}}
@@ -52,14 +48,7 @@ autocmd FileType make setlocal noexpandtab
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
 " set background=dark
-" colorscheme solarized       " set colorscheme
-
-" Prettify JSON files
-autocmd BufRead,BufNewFile *.json set filetype=json
-autocmd Syntax json sou ~/.vim/syntax/json.vim
-
-" Prettify Vagrantfile
-autocmd BufRead,BufNewFile Vagrantfile set filetype=ruby
+colorscheme solarized       " set colorscheme
 
 " Prettify Markdown files
 augroup markdown
