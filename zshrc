@@ -20,8 +20,9 @@ alias vim="stty stop '' -ixoff ; vim"
 ## Git Aliases
 alias gs='git status '
 alias ga='git add '
+alias gp='git push '
 alias gb='git branch '
-alias gc='git commit'
+alias gc='git commit -m'
 alias gd='git diff'
 alias go='git checkout '
 alias gk='gitk --all&'
