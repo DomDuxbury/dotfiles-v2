@@ -15,7 +15,7 @@ if [ -f $HOME/.profile ]; then
 fi
 
 # Vim Alias
-alias vim="stty stop '' -ixoff ; vim"
+alias vim="stty stop '' -ixoff ; vimx"
 
 ## Git Aliases
 alias gs='git status '
