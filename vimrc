@@ -35,6 +35,14 @@ set undodir=~/.vim/_undo/
 filetype off
 filetype plugin indent on
 
+" Begin Plugin List
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-commentary'
+
+" Initialize plugin system
+call plug#end()
+
 " }}}
 " Events {{{
 filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
