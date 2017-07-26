@@ -44,10 +44,10 @@ autocmd FileType make setlocal noexpandtab
 
 " }}}
 " Colours / Theme {{{
-" let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
-" set background=dark
+set background=dark
 colorscheme solarized       " set colorscheme
 
 " Prettify Markdown files
