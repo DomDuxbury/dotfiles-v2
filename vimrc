@@ -38,7 +38,14 @@ filetype plugin indent on
 " Begin Plugin List
 call plug#begin('~/.vim/plugged')
 
+" Lightweight plugin to handle comments
 Plug 'tpope/vim-commentary'
+
+" Clean autocomplete plugin
+Plug 'shougo/neocomplete.vim'
+
+" Neocomplete Settings
+source ~/dotfiles/neocomplete.vim
 
 " Initialize plugin system
 call plug#end()
