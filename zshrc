@@ -14,6 +14,10 @@ if [ -f $HOME/.profile ]; then
   source $HOME/.profile  # Read Mac .profile, if present.
 fi
 
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source $HOME/.local/bin/virtualenvwrapper.sh
+
 # Vim Alias
 alias vim="stty stop '' -ixoff ; vimx"
 
