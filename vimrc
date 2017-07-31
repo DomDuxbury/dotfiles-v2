@@ -137,5 +137,9 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " Latex bindings
 au FileType tex nnoremap <localleader>wc :VimtexCountWords<cr>
 
+" Bind leader n/p to next/prev buffer
+nnoremap <leader>n :n<cr>
+nnoremap <leader>p :prev<cr>
+
 " }}}
 " vim:foldmethod=marker:foldlevel=0

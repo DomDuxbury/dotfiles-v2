@@ -14,8 +14,12 @@ if [ -f $HOME/.profile ]; then
   source $HOME/.profile  # Read Mac .profile, if present.
 fi
 
+# Source FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set Up Python Virtualenv Wrapper
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
+export PROJECT_HOME=$HOME/code
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 # Vim Alias
