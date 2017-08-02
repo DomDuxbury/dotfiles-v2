@@ -47,6 +47,12 @@ Plug 'shougo/neocomplete.vim'
 " Neocomplete Settings
 source ~/dotfiles/neocomplete.vim
 
+" Linting plugin
+Plug 'w0rp/ale'
+let g:ale_linters = {
+\   'python': ['flake8'],
+\}
+
 " Initialize plugin system
 call plug#end()
 
