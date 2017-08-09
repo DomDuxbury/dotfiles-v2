@@ -59,3 +59,10 @@ qGit () {
   git push
   return 0
 }
+
+qPrune () {
+  git fetch -p && 
+    for branch in `git branch -vv | grep ': gone]' | gawk '{print $1}'`; 
+      do git branch -D $branch; 
+    done
+}
