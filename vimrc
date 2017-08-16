@@ -147,5 +147,9 @@ au FileType tex nnoremap <localleader>wc :VimtexCountWords<cr>
 nnoremap <leader>n :n<cr>
 nnoremap <leader>p :prev<cr>
 
+" Bind enter to insert new line below and shift enter above
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 " }}}
 " vim:foldmethod=marker:foldlevel=0
