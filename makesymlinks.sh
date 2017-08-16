@@ -73,5 +73,5 @@ fi
 }
 
 # Install tpm
-pip install thefuck
+pip install thefuck --user
 install_zsh
