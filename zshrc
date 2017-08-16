@@ -23,7 +23,7 @@ export PROJECT_HOME=$HOME/code
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 # Vim Alias
-alias vim="stty stop '' -ixoff ; vim"
+alias vim="stty stop '' -ixoff ; vimx"
 
 ## Git Aliases
 alias gs='git status '
