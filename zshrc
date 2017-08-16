@@ -71,3 +71,10 @@ if [ -f '/home/joe/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/jo
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+qPrune () {
+  git fetch -p && 
+    for branch in `git branch -vv | grep ': gone]' | gawk '{print $1}'`; 
+      do git branch -D $branch; 
+    done
+}
