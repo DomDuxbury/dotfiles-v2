@@ -47,7 +47,7 @@ alias tmk='tmux kill-session -t'
 alias htop='sudo htop'
 eval $(thefuck --alias)
 alias imdone='git checkout master; deactivate'
-
+alias ipy='python -c "import IPython; IPython.terminal.ipapp.launch_new_instance()"'
 # Shell Functions
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
