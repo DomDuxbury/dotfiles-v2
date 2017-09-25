@@ -15,7 +15,8 @@ if [ -f $HOME/.profile ]; then
 fi
 
 # Source FZF
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias vimf='vim $(fzf -m)'
 
 # Set Up Python Virtualenv Wrapper
 export WORKON_HOME=$HOME/.virtualenvs
