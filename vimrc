@@ -53,6 +53,9 @@ let g:ale_linters = {
 \   'python': ['flake8'],
 \}
 
+" Latex Plugins
+Plug 'lervag/vimtex'
+
 " Initialize plugin system
 call plug#end()
 
