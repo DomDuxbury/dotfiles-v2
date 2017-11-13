@@ -38,6 +38,11 @@ filetype plugin indent on
 " Begin Plugin List
 call plug#begin('~/.vim/plugged')
 
+" Syntax highlighting in Python
+Plug 'vim-python/python-syntax'
+
+let g:python_highlight_all = 1
+
 " Lightweight plugin to handle comments
 Plug 'tpope/vim-commentary'
 
@@ -55,6 +60,9 @@ let g:ale_linters = {
 
 " Latex Plugins
 Plug 'lervag/vimtex'
+
+" Async Commands
+Plug 'skywind3000/asyncrun.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -151,8 +159,11 @@ nnoremap <leader>n :n<cr>
 nnoremap <leader>p :prev<cr>
 
 " Bind enter to insert new line below and shift enter above
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+nnoremap <S-Enter> O<Esc>
+nnoremap <CR> o<Esc>
+
+nnoremap <localleader>p :AsyncRun -raw python %<cr>
+nnoremap <localleader>c :copen<cr>
 
 " }}}
 " vim:foldmethod=marker:foldlevel=0
