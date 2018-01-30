@@ -21,10 +21,11 @@ alias vimf='vim $(fzf -m)'
 # Set Up Python Virtualenv Wrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code
-source $HOME/.local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 
 # Vim Alias
 alias vim="stty stop '' -ixoff ; vimx"
+
 
 ## Git Aliases
 alias gs='git status '
@@ -49,6 +50,7 @@ alias htop='sudo htop'
 eval $(thefuck --alias)
 alias imdone='git checkout master; deactivate'
 alias ipy='python -c "import IPython; IPython.terminal.ipapp.launch_new_instance()"'
+alias wine32='env WINEARCH=win32 WINEPREFIX="$HOME/.wine32" wine'
 # Shell Functions
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
