@@ -73,5 +73,6 @@ fi
 }
 
 # Install tpm
-pip install --user thefuck
+sudo dnf update
+sudo dnf install gvim tmux thefuck
 install_zsh

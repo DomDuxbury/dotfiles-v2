@@ -11,7 +11,7 @@ if [ -f $HOME/.private ]; then
 fi
 
 if [ -f $HOME/.profile ]; then
-  source $HOME/.profile  # Read Mac .profile, if present.
+  source $HOME/.profile  
 fi
 
 # Source FZF
@@ -21,7 +21,7 @@ alias vimf='vim $(fzf -m)'
 # Set Up Python Virtualenv Wrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code
-source /usr/bin/virtualenvwrapper.sh
+source ~/.local/bin/virtualenvwrapper.sh
 
 # Vim Alias
 alias vim="stty stop '' -ixoff ; vimx"
