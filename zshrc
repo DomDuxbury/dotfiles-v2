@@ -24,7 +24,7 @@ export PROJECT_HOME=$HOME/code
 source ~/.local/bin/virtualenvwrapper.sh
 
 # Vim Alias
-alias vim="stty stop '' -ixoff ; vimx"
+alias vim="stty stop '' -ixoff ; vim"
 
 
 ## Git Aliases
@@ -47,7 +47,6 @@ alias tmk='tmux kill-session -t'
 
 ## Miscellaneous Aliases
 alias htop='sudo htop'
-eval $(thefuck --alias)
 alias imdone='git checkout master; deactivate'
 alias ipy='python -c "import IPython; IPython.terminal.ipapp.launch_new_instance()"'
 alias wine32='env WINEARCH=win32 WINEPREFIX="$HOME/.wine32" wine'
