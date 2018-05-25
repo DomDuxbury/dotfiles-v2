@@ -26,7 +26,6 @@ source ~/.local/bin/virtualenvwrapper.sh
 # Vim Alias
 alias vim="stty stop '' -ixoff ; vim"
 
-
 ## Git Aliases
 alias gs='git status '
 alias ga='git add '
@@ -50,6 +49,7 @@ alias htop='sudo htop'
 alias imdone='git checkout master; deactivate'
 alias ipy='python -c "import IPython; IPython.terminal.ipapp.launch_new_instance()"'
 alias wine32='env WINEARCH=win32 WINEPREFIX="$HOME/.wine32" wine'
+
 # Shell Functions
 # qfind - used to quickly find files that contain a string in a directory
 qfind () {
@@ -69,4 +69,10 @@ qPrune () {
     for branch in `git branch -vv | grep ': gone]' | gawk '{print $1}'`; 
       do git branch -D $branch; 
     done
+}
+
+
+cleanDocker () {
+  docker rm $(docker ps -q -a)
+  docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
 }
