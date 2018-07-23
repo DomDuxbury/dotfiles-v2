@@ -29,6 +29,7 @@ set backupdir=~/.vim/_backup/
 set undofile
 set undodir=~/.vim/_undo/
 
+set clipboard=unnamedplus
 " }}}
 " Plugins {{{
 
@@ -57,6 +58,8 @@ Plug 'w0rp/ale'
 let g:ale_linters = {
 \   'python': ['flake8'],
 \}
+
+" let g:ale_echo_cursor = 0
 
 " Latex Plugins
 Plug 'lervag/vimtex'
