@@ -131,11 +131,6 @@ set nowrap                " don't wrap text
 let mapleader = ","
 let maplocalleader = "-"
 
-" Map # to paste in n or copy in V
-" to system clipboard
-nnoremap # "+p
-vnoremap # "+y
-
 " Map exit to jk, remove esc map and arrows
 inoremap jk <esc>
 nnoremap <up> <nop>
