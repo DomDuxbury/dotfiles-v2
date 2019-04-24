@@ -71,7 +71,6 @@ qPrune () {
     done
 }
 
-
 cleanDocker () {
   docker rm $(docker ps -q -a)
   docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
