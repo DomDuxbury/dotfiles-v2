@@ -1,21 +1,22 @@
 # Some scripts for MCDA project
 
-startKafkaConnector () {
-    java -jar $CONNECTOR_HOME/simpol-tcp-connector.jar $1
+startKafkaServices () {
+    sudo systemctl start kafka.service &
+    sudo systemctl start simpolconnector.service &
+    sudo systemctl start frontendconnector.service 
 }
 
 startSimpol () {
-    startKafkaConnector $1 &
     workon simpol &&
     python $SIMPOL_HOME/index.py &
 }
 
-startZookeeper () {
-    $KAFKA_HOME/bin/zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties
+startFrontend () {
+    cd $FRONTEND_HOME && urxvt -e npm run dev &
 }
 
-startKafka () {
-    startZookeeper & $KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties
+startDevEnvironment() {
+    startKafkaServices & startFrontend & startSimpol
 }
 
 createKafkaTopic () {
