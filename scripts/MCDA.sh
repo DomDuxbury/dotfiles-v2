@@ -3,7 +3,7 @@
 startKafkaServices () {
     sudo systemctl start kafka.service &
     sudo systemctl start simpolconnector.service &
-    sudo systemctl start frontendconnector.service 
+    sudo systemctl start frontendconnector.service &
 }
 
 startSimpol () {
@@ -16,7 +16,7 @@ startFrontend () {
 }
 
 startDevEnvironment() {
-    startKafkaServices & startFrontend & startSimpol
+  sudo startKafkaServices & startFrontend & startSimpol
 }
 
 createKafkaTopic () {
