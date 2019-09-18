@@ -1,22 +1,21 @@
 # Some scripts for MCDA project
 
 startKafkaServices () {
-    sudo systemctl start kafka.service &
-    sudo systemctl start simpolconnector.service &
-    sudo systemctl start frontendconnector.service &
+    sudo systemctl start kafka.service &&
+    sudo systemctl start frontendconnector.service &&
 }
 
 startSimpol () {
     workon simpol &&
-    python $SIMPOL_HOME/index.py &
+    python $SIMPOL_HOME/index.py
 }
 
 startFrontend () {
-    cd $FRONTEND_HOME && urxvt -e npm run dev &
+    cd $FRONTEND_HOME && tmux split-window "npm run dev" &
 }
 
 startDevEnvironment() {
-  sudo startKafkaServices & startFrontend & startSimpol
+    startKafkaServices && startFrontend
 }
 
 createKafkaTopic () {
