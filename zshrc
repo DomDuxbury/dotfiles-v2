@@ -26,6 +26,7 @@ source ~/.local/bin/virtualenvwrapper.sh
 # Vim Alias
 alias vim="stty stop '' -ixoff ; vim"
 
+
 ## Git Aliases
 alias gs='git status '
 alias ga='git add '
@@ -62,6 +63,10 @@ qGit () {
   git commit -m $1
   git push
   return 0
+}
+
+rgv() {
+  vim -q <(rg --vimgrep ${1})
 }
 
 qPrune () {
