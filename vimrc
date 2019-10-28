@@ -67,6 +67,8 @@ Plug 'lervag/vimtex'
 " Async Commands
 Plug 'skywind3000/asyncrun.vim'
 
+Plug 'jremmen/vim-ripgrep'
+
 " Initialize plugin system
 call plug#end()
 

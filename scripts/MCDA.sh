@@ -6,16 +6,16 @@ startKafkaServices () {
 }
 
 startSimpol () {
-    workon simpol2 &&
-    python $SIMPOL_HOME/index.py &
+    workon simpol &&
+    python $SIMPOL_HOME/index.py
 }
 
 startFrontend () {
-    cd $FRONTEND_HOME && urxvt -e npm run dev &
+    cd $FRONTEND_HOME && tmux split-window "npm run dev" &
 }
 
 startDevEnvironment() {
-    startKafkaServices & startFrontend & startSimpol &
+    startKafkaServices && startFrontend
 }
 
 createKafkaTopic () {
