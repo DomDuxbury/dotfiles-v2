@@ -50,6 +50,9 @@ Plug 'tpope/vim-commentary'
 " Clean autocomplete plugin
 Plug 'shougo/neocomplete.vim'
 
+" Git Co Pilot
+Plug 'github/copilot.vim'
+
 " Neocomplete Settings
 source ~/dotfiles/neocomplete.vim
 
@@ -63,6 +66,7 @@ let g:ale_linters = {
 
 " Latex Plugins
 Plug 'lervag/vimtex'
+let g:vimtex_compiler_engine = 'xelatex'
 
 " Async Commands
 Plug 'skywind3000/asyncrun.vim'
