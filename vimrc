@@ -47,14 +47,8 @@ let g:python_highlight_all = 1
 " Lightweight plugin to handle comments
 Plug 'tpope/vim-commentary'
 
-" Clean autocomplete plugin
-Plug 'shougo/neocomplete.vim'
-
 " Git Co Pilot
 Plug 'github/copilot.vim'
-
-" Neocomplete Settings
-source ~/dotfiles/neocomplete.vim
 
 " Linting plugin
 Plug 'w0rp/ale'
@@ -72,6 +66,11 @@ let g:vimtex_compiler_engine = 'xelatex'
 Plug 'skywind3000/asyncrun.vim'
 
 Plug 'jremmen/vim-ripgrep'
+
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
 " Initialize plugin system
 call plug#end()
