@@ -40,6 +40,7 @@ mkdir -p $dir/vim/_swap
 mkdir -p $dir/vim/_backup
 mkdir -p $dir/vim/_undo
 
+
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
@@ -72,7 +73,27 @@ else
 fi
 }
 
-# Install tpm
-sudo dnf update
-sudo dnf install gvim tmux thefuck
+install_pip () {
+# Test to see if zshell is installed.  If it is:
+if [ -f /usr/bin/python3.11 ]; then
+    # Install Virtualenvwrapper
+    pip install virtualenvwrapper
+else
+    # Install python 3.11
+    sudo apt install build-essential checkinstall \ 
+    libreadline-gplv2-dev  libncursesw5-dev libssl-dev \
+    libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev 
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt install python3.11 python3-pip
+
+    # Link python to python3.11
+    ln -s /usr/bin/python /usr/bin/python3.11
+
+    # Install pip
+    install_pip
+fi
+}
+
+sudo apt-get install thefuck
 install_zsh
+install_pip
