@@ -31,6 +31,7 @@ Installation
 git clone https://github.com/DomDuxbury/dotfiles-v2.git ~/dotfiles
 cd ~/dotfiles
 ./makesymlinks.sh
+./configure_git.sh
 ```
 
 Credits
