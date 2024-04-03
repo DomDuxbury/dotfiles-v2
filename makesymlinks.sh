@@ -97,3 +97,4 @@ fi
 sudo apt-get install thefuck
 install_zsh
 install_pip
+sudo apt-get install vim-gtk bat

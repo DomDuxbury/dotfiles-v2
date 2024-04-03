@@ -26,6 +26,8 @@ source ~/.local/bin/virtualenvwrapper.sh
 # Vim Alias
 alias vim="stty stop '' -ixoff ; vim"
 
+# Cat Alias
+alias cat=batcat
 
 ## Git Aliases
 alias gs='git status '

@@ -162,11 +162,10 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 au FileType tex nnoremap <localleader>wc :VimtexCountWords<cr>
 
 " Bind leader n/p to next/prev buffer
-nnoremap <leader>n :n<cr>
+nnoremap <leader>n :next<cr>
 nnoremap <leader>p :prev<cr>
 
 " Bind enter to insert new line below and shift enter above
-nnoremap <S-Enter> O<Esc>
 nnoremap <CR> o<Esc>
 
 nnoremap <localleader>p :AsyncRun -raw python %<cr>
