@@ -94,7 +94,12 @@ else
 fi
 }
 
+install_nvm () {
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+}
+
 sudo apt-get install thefuck
 install_zsh
 install_pip
+install_nvm
 sudo apt-get install vim-gtk bat rip-grep jq
