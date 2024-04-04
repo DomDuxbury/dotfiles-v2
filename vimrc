@@ -165,8 +165,14 @@ au FileType tex nnoremap <localleader>wc :VimtexCountWords<cr>
 nnoremap <leader>n :next<cr>
 nnoremap <leader>p :prev<cr>
 
-" Bind enter to insert new line below and shift enter above
-nnoremap <CR> o<Esc>
+" Find and replace across a folder
+" Open all the files in arg mode
+nnoremap <leader>r :arg */**
+nnoremap <leader>R :argdo %s/\<foo\>/bar/ge | update
+
+" Create a mapping to insert an empty line below
+nnoremap <leader>o o<esc>
+nnoremap <leader>O O<esc>
 
 nnoremap <localleader>p :AsyncRun -raw python %<cr>
 nnoremap <localleader>c :copen<cr>
