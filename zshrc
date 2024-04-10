@@ -34,7 +34,6 @@ alias gs='git status '
 alias ga='git add '
 alias gp='git push '
 alias gb='git branch '
-alias gc='git commit -m'
 alias gd='git diff'
 alias go='git checkout '
 alias gk='gitk --all&'
@@ -60,10 +59,15 @@ qfind () {
   return 0
 }
 
-qGit () {
+qGit() {
   git add -A
-  git commit -m $1
+  gitmoji -c --title=$1
   git push
+  return 0
+}
+
+gc() {
+  gitmoji -c --title=$1
   return 0
 }
 

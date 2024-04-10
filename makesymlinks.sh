@@ -103,3 +103,5 @@ install_zsh
 install_pip
 install_nvm
 sudo apt-get install vim-gtk bat rip-grep jq
+npm install -g gitmoji
+gitmoji --config
