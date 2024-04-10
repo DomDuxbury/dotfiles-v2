@@ -61,13 +61,13 @@ qfind () {
 
 qGit() {
   git add -A
-  gitmoji -c --title=$1
+  gitmoji -c --title="${1}."
   git push
   return 0
 }
 
 gc() {
-  gitmoji -c --title=$1
+  gitmoji -c --title="${1}."
   return 0
 }
 
