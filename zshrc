@@ -64,6 +64,10 @@ gre () {
   return 0
 }
 
+find () {
+  fd -g -H "*${1}*"
+}
+
 qGit() {
   git add -A
   gitmoji -c --title="${1}."
