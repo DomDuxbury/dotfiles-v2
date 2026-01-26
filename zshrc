@@ -28,7 +28,12 @@ alias vim="stty stop '' -ixoff ; vim"
 
 ## Git Aliases
 alias gs='git status '
-alias ga='git add '
+
+gitAdd() {
+  git add $1 && pre-commit
+}
+
+alias ga='gitAdd'
 alias gp='git push '
 alias gb='git branch '
 alias gd='git diff'
@@ -46,6 +51,8 @@ alias tmk='tmux kill-session -t'
 # Pacman Aliases
 alias browse='pacman -Ss '
 alias install='sudo pacman -S '
+alias upgrade='sudo pacman -Sy --needed archlinux-keyring && sudo pacman -Su'
+alias remove='sudo pacman -R'
 
 ## Miscellaneous Aliases
 alias ll='ls -a'
@@ -95,6 +102,8 @@ cleanDocker() {
   docker rm $(docker ps -q -a)
   docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')
 }
+
+source ~/dotfiles/scripts/kafka.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/dom/Programs/google-cloud-sdk/path.zsh.inc' ]; then . '/home/dom/Programs/google-cloud-sdk/path.zsh.inc'; fi
