@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Upgrade vim to a version with +clipboard 
 sudo pacman -Rs --noconfirm vim
 sudo pacman -S --noconfirm gvim
@@ -16,10 +15,3 @@ sudo pacman -S --noconfirm git-delta
 
 # Install nvm
 sudo pacman -S --noconfirm nvm
-
-# Install node
-nvm install node
-
-# Setup git terminal configuration
-npm install -g gitmoji-cli
-gitmoji --config
