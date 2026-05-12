@@ -30,7 +30,7 @@ alias vim="stty stop '' -ixoff ; vim"
 alias gs='git status '
 
 gitAdd() {
-  git add $1 && pre-commit
+  git add $1
 }
 
 alias ga='gitAdd'

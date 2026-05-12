@@ -5,10 +5,9 @@
 ############################
 
 ########## Variables
-
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc vim zshrc gitconfig oh-my-zsh tmux.conf tmux"    # list of files/folders to symlink in homedir
+files="vimrc vim zshrc gitconfig tmux.conf tmux"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,16 +28,6 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-
-# Install tpm
-mkdir -p $dir/tmux/plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# Setup git config
-sudo pacman -S git-delta
-sudo pacman -S nvm
-npm install -g gitmoji
-gitmoji --config
 
 # Make vim backup swap and undo folders
 mkdir -p $dir/vim
