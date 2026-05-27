@@ -1,7 +1,11 @@
 # Some scripts for MCDA project
 
 startKafka () {
-  sudo kafka-server-start.sh $KAFKA_HOME/config/server.properties
+  sudo kafka-server-start.sh $KAFKA_HOME/server.properties
+}
+
+configureKafka () {
+  sudo kafka-storage.sh format --standalone -t $(kafka-storage.sh random-uuid) -c $KAFKA_HOME/server.properties
 }
 
 createKafkaTopic () {
