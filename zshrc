@@ -75,14 +75,14 @@ find () {
   fd -g -H "*${1}*"
 }
 
-qGit() {
+qGit () {
   git add -A
   gitmoji -c --title="${1}."
   git push
   return 0
 }
 
-gc() {
+gC () {
   gitmoji -c --title="${1}."
   return 0
 }
