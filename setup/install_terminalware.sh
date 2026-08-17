@@ -15,3 +15,5 @@ sudo pacman -S --noconfirm git-delta
 
 # Install nvm
 sudo pacman -S --noconfirm nvm
+
+source ~/.zshrc
